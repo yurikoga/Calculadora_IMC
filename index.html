@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-group">
+            <label for="weight">Peso</label>
+            <input type="number" id="weight" placeholder="60" step="0.1">
+        </div>
+
+        <div class="form-group">
+            <label for="height">Altura</label>
+            <input type="number" id="height" placeholder="1,65" step="0.01">
+        </div>
+
+        <button class="btn-submit" id="calculate-btn">Calcular</button>
+
+        <div class="result-title" id="info-text">
+            Saiba agora se está no seu<br>peso ideal!
+        </div>
+        <div class="result-display" id="result-val"></div>
+
+        <table class="imc-table">
+            <thead>
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="row-under-severe">
+                    <td>Menos de 17</td>
+                    <td>Muito abaixo do peso</td>
+                </tr>
+                <tr id="row-under">
+                    <td>Entre 17 e 18,49</td>
+                    <td>Abaixo do peso</td>
+                </tr>
+                <tr id="row-normal">
+                    <td>Entre 18,5 e 24,99</td>
+                    <td>Peso normal</td>
+                </tr>
+                <tr id="row-over">
+                    <td>Entre 25 e 29,99</td>
+                    <td>Acima do peso</td>
+                </tr>
+                <tr id="row-obese-1">
+                    <td>Entre 30 e 34,99</td>
+                    <td>Obesidade I</td>
+                </tr>
+                <tr id="row-obese-2">
+                    <td>Entre 35 e 39,99</td>
+                    <td>Obesidade II (severa)</td>
+                </tr>
+                <tr id="row-obese-3">
+                    <td>Acima de 40</td>
+                    <td>Obesidade III (mórbida)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
